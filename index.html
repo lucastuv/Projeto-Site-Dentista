@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica dos Dentes</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <h1 style="color: #fff; text-shadow: 2px 2px 8px #0074D9, 0 0 10px #b3e0ff; font-family: 'Montserrat', Arial, sans-serif;"></h1>
+                <span style="font-size: 1.5em; display: block; text-align: center;">Clinica dos Dentes</span>
+            </h1>
+            
+            <p>Menu</p>
+            
+            <ul>
+                <li style="margin-bottom: 40px; font-size: 1.2em; font-family: 'Times New Roman', Times, serif;"><a href="index.html">Pagina Inicial</a></li>
+                <li style="margin-bottom: 40px; font-size: 1.2em; font-family: 'Times New Roman', Times, serif;"><a href="about.html">Sobre Nós</a></li>
+                <li style="margin-bottom: 40px; font-size: 1.2em; font-family: 'Times New Roman', Times, serif;"><a href="atendimento.html">Horário de Atendimento</a></li>
+                <li style="margin-bottom: 40px; font-size: 1.2em; font-family: 'Times New Roman', Times, serif;"><a href="contato.html">Contato</a></li>
+
+
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="header">
+            <img src="docs/bannerdentista.jpg" alt="Banner Dentista" title="Clínica dos Dentes: excelência em odontologia estética e preventiva" style="width:100%; height:auto;">
+            <!-- Aqui vai o seu header -->
+            </div>
+    
+            <div class="content">
+                <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+                <h2 style="font-size: 2.5em; color: #0074D9; text-shadow: 2px 2px 8px #b3e0ff, 0 0 10px #0074D9; font-family: 'Montserrat', Arial, sans-serif; letter-spacing: 2px; text-align: center; margin-bottom: 30px; animation: pulse 1.5s infinite alternate;">
+                    Bem-vindo à Clínica dos Dentes!
+                </h2>
+                <style>
+                @keyframes pulse {
+                    from { text-shadow: 2px 2px 8px #b3e0ff, 0 0 10px #0074D9; }
+                    to { text-shadow: 4px 4px 16px #0074D9, 0 0 20px #b3e0ff; }
+                }
+                </style>
+                <p style="font-size: 1.0em; font-family: 'Georgia', serif; line-height: 2.0; text-align: center; font-weight: bold;">
+                    <span style="font-size: 1.0em; display: inline-block; text-align: center;">
+                        <span style="float: right; margin-left: -20px; margin-top: 140px;">
+                            <img src="docs/Dente.svg" alt="Ícone de Dente" style="width:50px; height:auto; vertical-align: middle;">
+                        </span>
+                        A Clínica dos Dentes é referência em odontologia estética e preventiva, proporcionando tratamentos inovadores e personalizados para promover a saúde bucal e a autoestima de nossos pacientes. Contamos com uma equipe altamente qualificada, infraestrutura moderna e tecnologia de última geração, garantindo excelência, segurança e conforto em cada atendimento. Descubra uma experiência diferenciada em cuidado odontológico, onde seu sorriso é nossa prioridade.
+                    </span>
+                </p>
+                <div style="display: flex; justify-content: center; margin-top: 30px;">
+                    <video width="640" height="360" controls autoplay muted>
+                        <source src="docs/videoplayback (2).mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+                </p>
+                <!-- Aqui vai o seu conteúdo -->
+            </div>
+    
+            <div class="footer">
+                <img src="docs/love.gif" alt="Love Gif" style="width:200px; height:auto; vertical-align: middle; margin-left: 0px;">
+                <div style="display: inline-block; vertical-align: middle; margin-left: 30px;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; justify-content: center;">
+                        <div>
+                            <h3 style="margin-bottom: 8px;">Telefones de Contato</h3>
+                            <ul style="font-size: 1.1em; margin: 0; padding-left: 18px;">
+                                <li>Celular: (11) 91234-5678</li>
+                                <li>WhatsApp: (11) 98765-4321</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 8px;">Endereço</h3>
+                            <p style="font-size: 1.1em; margin: 0;">
+                                Rua dos Sorrisos, 123<br>
+                                Bairro Centro<br>
+                                São Paulo - SP<br>
+                                CEP: 01234-567
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Aqui vai o seu rodapé -->
+            </div>
+        </div>
+    </div>
+    <!-- Adicione este trecho em todas as páginas HTML -->
+<audio id="bg-music" src="docs/sonata.mp3" autoplay loop hidden></audio>
+<script>
+    // Garante que o áudio continue tocando ao interagir com a página
+    document.addEventListener('click', function() {
+        const audio = document.getElementById('bg-music');
+        audio.volume = 0.1;
+        if (audio.paused) {
+            audio.play();
+        }
+    });
+
+    // Define o volume baixo e restaura o tempo salvo ao carregar a página
+    window.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('bg-music');
+        audio.volume = 0.1;
+        const savedTime = localStorage.getItem('bg-music-time');
+        if (savedTime) {
+            audio.currentTime = parseFloat(savedTime);
+        }
+    });
+
+    // Salva o tempo atual antes de sair da página
+    window.addEventListener('beforeunload', function() {
+        const audio = document.getElementById('bg-music');
+        localStorage.setItem('bg-music-time', audio.currentTime);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica dos Dentes</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <h1 style="color: #fff; text-shadow: 2px 2px 8px #0074D9, 0 0 10px #b3e0ff; font-family: 'Montserrat', Arial, sans-serif;"></h1>
+                <span style="font-size: 1.5em; display: block; text-align: center;">Clinica dos Dentes</span>
+            </h1>
+            <p>Menu</p>
+            
+            <ul>
+                <li style="margin-bottom: 40px; font-size: 1.2em; font-family: 'Times New Roman', Times, serif;"><a href="index.html">Pagina Inicial</a></li>
+                <li style="margin-bottom: 40px; font-size: 1.2em; font-family: 'Times New Roman', Times, serif;"><a href="about.html">Sobre Nós</a></li>
+                <li style="margin-bottom: 40px; font-size: 1.2em; font-family: 'Times New Roman', Times, serif;"><a href="atendimento.html">Horário de Atendimento</a></li>
+                <li style="margin-bottom: 40px; font-size: 1.2em; font-family: 'Times New Roman', Times, serif;"><a href="contato.html">Contato</a></li>
+
+
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="header">
+            <img src="docs/bannerdentista.jpg" alt="Banner Dentista" title="Clínica dos Dentes: excelência em odontologia estética e preventiva" style="width:100%; height:auto;">
+            <!-- Aqui vai o seu header -->
+            </div>
+    
+            <div class="content">
+                <h2>Atendimento: </h2>
+                <p style="font-size: 2.0em; font-family: 'Georgia', serif; line-height: 2.6;"></p>
+                    <span style="font-size: 1.0em;">
+                        <img src="docs/Dente.svg" alt="Ícone de Dente" style="width:50px; height:auto; float:right; margin-left: 15px; margin-top: 140px;">
+                        <img src="docs/dentist.svg" alt="Ícone de Dentista" title="atendimento" style="width:250px; height:auto; float:right; margin-right: 100px; margin-top: -20px;">
+                        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 50%; font-size: 1em;">
+                            <thead>
+                                <tr>
+                                    <th style="background-color: #e3e3e3;">Serviços</th>
+                                    <th style="background-color: #e3e3e3;">Segunda a Sexta</th>
+                                    <th style="background-color: #e3e3e3;">Sábados</th>
+                                    <th style="background-color: #e3e3e3;">Feriados</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Clínica geral</td>
+                                    <td>08h - 19h</td>
+                                    <td>08h - 14h</td>
+                                    <td>08h - 14h</td>
+                                </tr>
+                                <tr>
+                                    <td>Cirurgião Dentista</td>
+                                    <td>08h - 19h</td>
+                                    <td>08h - 14h</td>
+                                    <td>08h - 14h</td>
+                                </tr>
+                                <tr>
+                                    <td>Dentista Pediatra</td>
+                                    <td>08h - 19h</td>
+                                    <td>08h - 18h</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Harmonização</td>
+                                    <td>08h - 19h</td>
+                                    <td>08h - 18h</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                            <style>
+                                table tbody tr:hover {
+                                    background-color: #e3e3e3;
+                                }
+                            </style>
+                        </table>
+                    </span>
+                </p>
+                <!-- Aqui vai o seu conteúdo -->
+            </div>
+    
+             <div class="footer">
+                <img src="docs/love.gif" alt="Love Gif" style="width:200px; height:auto; vertical-align: middle; margin-left: 0px;">
+                <div style="display: inline-block; vertical-align: middle; margin-left: 30px;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; justify-content: center;">
+                        <div>
+                            <h3 style="margin-bottom: 8px;">Telefones de Contato</h3>
+                            <ul style="font-size: 1.1em; margin: 0; padding-left: 18px;">
+                                <li>Celular: (11) 91234-5678</li>
+                                <li>WhatsApp: (11) 98765-4321</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 8px;">Endereço</h3>
+                            <p style="font-size: 1.1em; margin: 0;">
+                                Rua dos Sorrisos, 123<br>
+                                Bairro Centro<br>
+                                São Paulo - SP<br>
+                                CEP: 01234-567
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Aqui vai o seu rodapé -->
+            </div>
+        </div>
+    </div>
+    <!-- Adicione este trecho em todas as páginas HTML -->
+<audio id="bg-music" src="docs/sonata.mp3" autoplay loop hidden></audio>
+<script>
+    // Garante que o áudio continue tocando ao interagir com a página
+    document.addEventListener('click', function() {
+        const audio = document.getElementById('bg-music');
+        audio.volume = 0.1;
+        if (audio.paused) {
+            audio.play();
+        }
+    });
+
+    // Define o volume baixo e restaura o tempo salvo ao carregar a página
+    window.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('bg-music');
+        audio.volume = 0.1;
+        const savedTime = localStorage.getItem('bg-music-time');
+        if (savedTime) {
+            audio.currentTime = parseFloat(savedTime);
+        }
+    });
+
+    // Salva o tempo atual antes de sair da página
+    window.addEventListener('beforeunload', function() {
+        const audio = document.getElementById('bg-music');
+        localStorage.setItem('bg-music-time', audio.currentTime);
+    });
+</script>
+</script>
+</body>
+</html>
